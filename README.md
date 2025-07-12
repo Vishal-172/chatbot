@@ -53,3 +53,8 @@
 1.Manual test cases using more than 25 sample queries
 
 2.Multilingual test input/output validation
+
+### Final output:
+
+![image alt](<img width="1896" height="908" alt="image" src="https://github.com/user-attachments/assets/4223c34b-4b2b-492c-a129-9f5b0722d406" />)
+
