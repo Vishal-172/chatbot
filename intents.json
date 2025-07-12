@@ -1,0 +1,120 @@
+{
+  "intents": [
+    {
+      "tag": "admission_fee",
+      "patterns": ["What is the admission fee?", "How much is the admission fee?", "Tell me the admission cost"],
+      "response": "The admission fee is ₹85,000 per year."
+    },
+    {
+      "tag": "hostel_fee",
+      "patterns": ["What is the hostel fee?", "How much for hostel?", "Hostel charges?"],
+      "response": "The hostel fee is ₹60,000 per year including food and lodging."
+    },
+    {
+      "tag": "college_timing",
+      "patterns": ["What are the college timings?", "When does college start?", "College schedule?"],
+      "response": "College runs from 8:30 AM to 4:00 PM, Monday to Friday."
+    },
+    {
+      "tag": "documents_required",
+      "patterns": ["What documents are needed for admission?", "Admission documents?", "List of documents for joining"],
+      "response": "You need 10th and 12th mark sheets, Transfer Certificate, Aadhar card, and 4 passport-sized photos."
+    },
+    {
+      "tag": "placement_support",
+      "patterns": ["Do you provide placements?", "Is there placement support?", "What about job placements?"],
+      "response": "Yes, our college offers strong placement support with 150+ company tie-ups and 95% placement success."
+    },
+    {
+      "tag": "transport_facility",
+      "patterns": ["Is transport available?", "Do you provide bus facility?", "Is there a college bus service?"],
+      "response": "Yes, transport facilities are available from most major areas in the city."
+    },
+    {
+      "tag": "scholarship_availability",
+      "patterns": ["Are scholarships available?", "Do you offer scholarships?", "How to get a scholarship?"],
+      "response": "Yes, both merit-based and government scholarships are available."
+    },
+    {
+      "tag": "library_facility",
+      "patterns": ["Do you have a library?", "Is there a library?", "Tell me about the library"],
+      "response": "Yes, the college has a digital library with 20,000+ books and access to online journals."
+    },
+    {
+      "tag": "canteen_facility",
+      "patterns": ["Do you have a canteen?", "Is canteen available?", "What about food in college?"],
+      "response": "Yes, a clean and affordable canteen is available for students and staff."
+    },
+    {
+      "tag": "course_duration",
+      "patterns": ["What is the duration of the B.Tech course?", "How long is the engineering course?", "Course duration?"],
+      "response": "The B.Tech course duration is 4 years (8 semesters)."
+    },
+    {
+      "tag": "contact_info",
+      "patterns": ["How can I contact the college?", "College contact number?", "Email ID of the college?"],
+      "response": "You can contact us at +91-9876543210 or email info@college.edu."
+    },
+    {
+      "tag": "sports_facility",
+      "patterns": ["Do you have sports facilities?", "What games are available?", "Any sports activities?"],
+      "response": "Yes, we offer sports facilities for cricket, football, badminton, table tennis, and more."
+    },
+    {
+      "tag": "wifi_facility",
+      "patterns": ["Is Wi-Fi available on campus?", "Do you provide internet?", "Wifi in college?"],
+      "response": "Yes, high-speed Wi-Fi is available in classrooms, labs, and hostels."
+    },
+    {
+      "tag": "internship_opportunity",
+      "patterns": ["Are internships provided?", "Do students get internships?", "does college provide internships?"],
+      "response": "Yes, we assist students in getting internships in reputed companies."
+    },
+    {
+      "tag": "exam_system",
+      "patterns": ["How are exams conducted?", "Tell me about the exam system", "What is the exam structure?"],
+      "response": "We follow a semester-based system with internal assessments and final exams every 6 months."
+    },
+    {
+      "tag": "college_address",
+      "patterns": ["What is the college address?", "Where is the college located?", "Tell me the location of the college"],
+      "response": "Our college is located at 123 Knowledge Avenue, CityName, State, PIN 600001."
+    },
+    {
+      "tag": "semester_details",
+      "patterns": ["How many semesters in B.Tech?", "Tell me the semester details", "What is the structure of the semesters?"],
+      "response": "B.Tech has 8 semesters. Each semester includes theory, lab, and project components."
+    },
+    {
+      "tag": "subjects_cse",
+      "patterns": ["What are the subjects in CSE?", "List CSE subjects", "Tell me CSE subjects"],
+      "response": "CSE includes Data Structures, DBMS, Operating Systems, Algorithms, AI, ML, and Web Development."
+    },
+    {
+      "tag": "subjects_ece",
+      "patterns": ["What are the subjects in ECE?", "List ECE subjects", "Tell me ECE subjects"],
+      "response": "ECE includes Digital Electronics, Signals & Systems, VLSI, Microprocessors, and Communication Systems."
+    },
+    {
+      "tag": "admission_deadline",
+      "patterns": ["When is the admission last date?", "What is the deadline for applying?", "Admission closing date?"],
+      "response": "Admissions close by July 31st for the academic year. Apply early to avoid last-minute issues."
+    },
+    {
+      "tag": "course_eligibility",
+      "patterns": ["What is the eligibility for B.Tech?", "Who can apply for engineering?", "Minimum marks required?"],
+      "response": "Students must have completed 12th with Physics, Chemistry, and Maths. Minimum 60% required."
+    },
+    {
+      "tag": "department_list",
+      "patterns": ["What departments are available?", "List of courses or branches?", "What are the available streams?"],
+      "response": "Available departments: CSE, ECE, EEE, Mechanical, Civil, and AI & DS."
+    },
+    {
+      "tag": "about_college",
+      "patterns": ["Tell me about the college", "Give an overview of the college", "Brief intro about college"],
+      "response": "Our college is a premier institute established in 1999, offering UG and PG programs with excellent faculty, placements, and infrastructure."
+    }
+    
+  ]
+}

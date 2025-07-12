@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Enquiry Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Header with Logo and College Name -->
+    <div class="header">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="College Logo" class="logo">
+        <h1 class="college-name"><b>ABC COLLEGE OF ENGINEERING AND TECHNOLOGY</b></h1>
+        <h1 class="subheading">🎓 College Enquiry Chatbot</h1>
+    </div>
+
+    <div class="chat-container">
+        
+        <div id="chatlog">
+            <h4>Hello!, How Can I Help You 😁</h4>
+        </div>
+        <div style="margin-top: 10px;">
+            <input type="text" id="userInput" placeholder="Ask me anything..." autofocus>
+            <button onclick="send()">Send</button>
+        </div>
+    </div>
+    
+
+
+    <script>
+        async function send() {
+            const msg = document.getElementById("userInput").value;
+            if (!msg.trim()) return;
+
+            const chatlog = document.getElementById("chatlog");
+
+            chatlog.innerHTML += `<div class="user"><strong>You:</strong> ${msg}</div>`;
+
+            const response = await fetch('/get', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `msg=${encodeURIComponent(msg)}`
+            });
+
+            const data = await response.json();
+            chatlog.innerHTML += `<div class="bot"><strong>College:</strong> ${data.reply}</div>`;
+
+            document.getElementById("userInput").value = "";
+            chatlog.scrollTop = chatlog.scrollHeight;
+        }
+    </script>
+</body>
+</html>
+

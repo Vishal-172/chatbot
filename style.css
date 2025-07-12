@@ -1,0 +1,100 @@
+body {
+    background: linear-gradient(135deg, #0a4f1d, #aed4bc);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 60px auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 25px;
+}
+
+.chat-title {
+    text-align: center;
+    color: #052b14;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#chatlog {
+    height: 350px;
+    overflow-y: auto;
+    border: 2px solid #a6ffcb;
+    padding: 10px;
+    background-color: #d6ffc7;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#chatlog div {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.user {
+    background-color: #37dc60;
+    text-align: right;
+}
+
+.bot {
+    background-color: #bee5bc;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #189a30;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2cbf47;
+}
+.header {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+    align-content: center;
+}
+
+.college-name {
+    color: #000000;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.subheading {
+    font-size: 18px;
+    color: #0d2b0f;
+    margin-bottom: 20px;
+}
+
+
