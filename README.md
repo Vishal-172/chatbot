@@ -9,6 +9,7 @@
 
  #### 1.User Input:
    User types a question in the chat interface.
+   
    Example: "What is the admission fee?" or in other languages like Hindi or Tamil.
 
  #### 2.Language Detection:
