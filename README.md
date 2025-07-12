@@ -56,5 +56,5 @@
 
 ### Final output:
 
-![image alt](<img width="1896" height="908" alt="image" src="https://github.com/user-attachments/assets/4223c34b-4b2b-492c-a129-9f5b0722d406" />)
+![image alt](https://github.com/user-attachments/assets/4223c34b-4b2b-492c-a129-9f5b0722d406)
 
