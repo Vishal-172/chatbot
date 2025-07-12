@@ -33,16 +33,23 @@
 ### 🛠️ Technologies Used:
   #### 🔧 Backend:
 1.Python 3
+
 2.Flask – for routing and server logic
+
 3.Regex – for matching queries
+
 4.googletrans – for automatic language detection and translation
+
 5.intents.json – for storing question patterns and predefined responses
 
   #### 🎨 Frontend:
 1.HTML – for page structure
+
 2.CSS – for styling and elegant design
+
 3.JavaScript – for chatbot interaction and typing animation
 
 #### 🧪 Testing Tools:
 1.Manual test cases using more than 25 sample queries
+
 2.Multilingual test input/output validation
