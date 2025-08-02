@@ -97,4 +97,34 @@ button:hover {
     margin-bottom: 20px;
 }
 
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
 
+#userInput {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.send-btn,
+.mic-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.mic-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
