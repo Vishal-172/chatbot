@@ -7,33 +7,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <!-- Header with Logo and College Name -->
     <div class="header">
         <img src="{{ url_for('static', filename='logo.png') }}" alt="College Logo" class="logo">
         <h1 class="college-name"><b>ABC COLLEGE OF ENGINEERING AND TECHNOLOGY</b></h1>
         <h1 class="subheading">🎓 College Enquiry Chatbot</h1>
     </div>
-
-    <div class="chat-container">
-        
-        <div id="chatlog">
-            <h4>Hello!, How Can I Help You 😁</h4>
-        </div>
-        <div style="margin-top: 10px;">
-            <input type="text" id="userInput" placeholder="Ask me anything..." autofocus>
-            <button onclick="send()">Send</button>
-        </div>
+<div class="chat-container">
+    <div id="chatlog">
+        <h4>Hello!, How Can I Help You 😁</h4>
     </div>
-    
+
+    <div class="input-wrapper">
+        <input type="text" id="userInput" placeholder="Ask me anything..." autofocus>
+        <button class="send-btn" onclick="send()">Send</button>
+        <button class="mic-btn" onclick="startListening()">🎤</button>
+    </div>
+</div>
 
 
     <script>
         async function send() {
-            const msg = document.getElementById("userInput").value;
-            if (!msg.trim()) return;
+            const inputBox = document.getElementById("userInput");
+            const msg = inputBox.value.trim();
+            if (!msg) return;
 
             const chatlog = document.getElementById("chatlog");
-
             chatlog.innerHTML += `<div class="user"><strong>You:</strong> ${msg}</div>`;
 
             const response = await fetch('/get', {
@@ -43,12 +41,48 @@
             });
 
             const data = await response.json();
-            chatlog.innerHTML += `<div class="bot"><strong>College:</strong> ${data.reply}</div>`;
+            const reply = data.reply;
 
-            document.getElementById("userInput").value = "";
+            chatlog.innerHTML += `<div class="bot"><strong>College:</strong> ${reply}</div>`;
+            inputBox.value = "";
             chatlog.scrollTop = chatlog.scrollHeight;
+
+            speakText(reply);
+        }
+
+        document.getElementById("userInput").addEventListener("keydown", function (e) {
+            if (e.key === "Enter") send();
+        });
+
+        function startListening() {
+            if (!('webkitSpeechRecognition' in window)) {
+                alert("Speech recognition not supported in this browser.");
+                return;
+            }
+            const recognition = new webkitSpeechRecognition();
+            recognition.lang = 'en-US'; 
+            recognition.interimResults = false;
+            recognition.maxAlternatives = 1;
+
+            recognition.start();
+
+            recognition.onresult = function (event) {
+                const speechResult = event.results[0][0].transcript;
+                document.getElementById("userInput").value = speechResult;
+                send();
+            };
+
+            recognition.onerror = function (event) {
+                alert("Speech recognition error: " + event.error);
+            };
+        }
+
+        function speakText(text) {
+            const synth = window.speechSynthesis;
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = 'en-US'; // Force English output
+            synth.speak(utterance);
         }
     </script>
 </body>
 </html>
-
