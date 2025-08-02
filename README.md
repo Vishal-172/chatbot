@@ -1,13 +1,13 @@
 # Chatbot
 
-## Multilingual College Enquiry Chatbot using Flask
+## Multilingual College Enquiry Chatbot with Voice Assistant
 
 ### 🔎Brief Description:
-  The Multilingual College Enquiry Chatbot is a rule-based web chatbot application designed to answer frequently asked questions (FAQs) about a college. It supports multiple languages using Google Translate API, ensuring accessibility for users from various linguistic backgrounds. The chatbot is built with Flask as the backend framework and a responsive, elegant frontend using HTML/CSS/JavaScript.Users can ask questions like college timings, hostel fees, available courses, eligibility, and more. The chatbot detects the user's language, processes the query, matches it with predefined patterns, and responds accurately in the same language.
+  A smart web-based chatbot that helps students and parents with college-related queries in real-time. It supports both text and voice-based interaction (STT & TTS) using multilingual capability, offering seamless communication in English, and optionally Tamil, Hindi, and Telugu.
 
 ### ⚙️ Working Methodology:
 
- #### 1.User Input:
+ #### 1.User Interaction
    User types a question in the chat interface.
    
    Example: "What is the admission fee?" or in other languages like Hindi or Tamil.
@@ -24,7 +24,7 @@
    The bot translates this response into the detected input language.
 
 #### 5.Return Response:
-   The translated answer is displayed in the chat with the label "College:".
+   The translated answer is displayed in the chat with the label "College:".Spoken aloud using the SpeechSynthesis API in JavaScript (SpeechSynthesisUttence) 
 
 #### 6.Typing Animation & UI:
    Before the response is shown, a brief "College is typing..." animation appears to improve user experience.
@@ -41,6 +41,10 @@
 4.googletrans – for automatic language detection and translation
 
 5.intents.json – for storing question patterns and predefined responses
+
+6.Speech Recognition - Web Speech API
+
+7.TTS (Voice Output) - Web Speech Synthesis API
 
   #### 🎨 Frontend:
 1.HTML – for page structure
